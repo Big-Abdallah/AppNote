@@ -1,0 +1,70 @@
+/* index.css */
+
+/* Reset some default browser styles */
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "tailwindcss"; 
+@plugin "./hero.js";
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--brand-light);
+  color: #333;
+}
+
+/* Custom CSS Variables */
+:root {
+  --brand-light: #ddf6ee;
+  --brand-lighter: #eaf3eb;
+  --brand-green: #22c55e;
+  --brand-yellow: #facc15;
+  --brand-border: #1ebbcc;
+  --brand-bg: #ffffff;
+}
+
+/* Utility classes for container widths */
+.container-80 {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Navbar height */
+.my-navbar {
+  height: 56px;
+}
+
+/* Animations */
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Utility for break-word in cards */
+.break-words {
+  word-wrap: break-word;
+  word-break: break-word;
+}
